@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class KafkaConsumer {
 
-    @KafkaListener(topics = "exam-topic", groupId = "")
+    @KafkaListener(topics = "exam-topic", groupId = "jwlim-consume-group-id")
     public void flightEventConsumer(Object message) {
         log.info("Consumer consume Kafka message -> {}", message);
 
